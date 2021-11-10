@@ -1,1 +1,1 @@
-# export_trello
+Export all trello cards to Excel
