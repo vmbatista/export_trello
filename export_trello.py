@@ -7,6 +7,7 @@ client = TrelloClient(
     token       = 'tokentokentokentokentokentokentokentokentoken',
     )
 
+# open cards
 df_open = []
 boards = client.list_boards()
 for board in boards:
@@ -20,6 +21,7 @@ for board in boards:
         for card in cards:
             df_open.append((board.name, list.name, card.name, card.card_created_date, card.desc))
 
+# archived cards
 df_closed = []
 for board in boards:
     cards  = board.closed_cards()
